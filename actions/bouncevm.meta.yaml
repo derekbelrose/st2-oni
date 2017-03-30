@@ -10,11 +10,12 @@ enabled: true
 parameters:
   vsphere:
     default:
-      - "default"
-    type: string
+      type: "string"
+      default: "default"
 
   vm_name:
-    type: string
+    type: "string"
+    required: true
 
 notify:
   on-complete:
