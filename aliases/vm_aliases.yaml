@@ -7,11 +7,8 @@ formats:
     representation:
       - "bounce {{ vm_name }} on {{ vsphere }}"
       - "bounce {{ vm_name }}"
+ack:
+  format: "Executing `{{ actionalias.ref }}`, your id is `{{ execution.id[:2]...{{ execution.id[-2:] }}`"
 result:
   format: |
-    Results of bounce {{ execution.parameters.args }}:
-    {% if execution.result.status == "succeeded" %}
-    Success!
-    {% else %}
-    Failure!
-    {% endif %}
+    I have completed this action
