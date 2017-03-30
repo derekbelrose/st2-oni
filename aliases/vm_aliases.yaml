@@ -10,7 +10,8 @@ formats:
 ack:
   format: "Executing"
   append_url: false
-
 result: 
-  format: "action complete"
-  enabled: true
+  format: |
+    action completed
+
+    Details are...forthcoming
