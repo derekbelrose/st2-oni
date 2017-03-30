@@ -5,8 +5,8 @@ description: "Power off and on a VMware VM"
 formats:
   - display: "bounce <vmname>"
     representation:
-      - "bounce {{ vm_name}}"
       - "bounce {{ vm_name }} on {{ vsphere }}"
+      - "bounce {{ vm_name }}"
 result:
   format: |
     Results of bounce {{ execution.parameters.args }}:

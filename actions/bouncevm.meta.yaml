@@ -9,9 +9,9 @@ entry_point: "chains/bouncevm.yaml"
 enabled: true
 parameters:
   vsphere:
-    default:
-      type: "string"
-      default: "default"
+    type: "string"
+    default: "default"
+    required: true
 
   vm_name:
     type: "string"
