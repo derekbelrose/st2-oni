@@ -11,4 +11,5 @@ ack:
   format: "Executing"
   append_url: false
 
-result: "action complete"
+result: 
+  format: "action complete"
