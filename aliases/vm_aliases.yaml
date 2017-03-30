@@ -13,3 +13,4 @@ ack:
 
 result: 
   format: "action complete"
+  enabled: true
