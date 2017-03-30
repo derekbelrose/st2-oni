@@ -16,9 +16,3 @@ parameters:
   vm_name:
     type: "string"
     required: true
-
-notify:
-  on-complete:
-    message: "\"@channel: bouncevm succeeded\""
-    routes:
-      - "hipchat"
