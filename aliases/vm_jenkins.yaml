@@ -1,0 +1,14 @@
+---
+name: "chatops.jenkins_build"
+action_ref: "jenkins.build_job"
+description: "Build a Jenkins Project"
+formats:
+  - display: "<jenkinsbuild <project>"
+    representation:
+      - "jenkins deploy {{ project }}"
+ack:
+  format: Hey there, I'll start building {{ project }}'
+
+result:
+  format: |
+    Done
