@@ -1,0 +1,23 @@
+---
+name: "bouncevm"
+description: "Power Off and then on a VM"
+
+runner_type: "action-chain"
+
+entry_point: "chains/bouncevm.yaml"
+
+enabled: true
+parameters:
+  vsphere:
+    default:
+      - "default"
+    type: string
+
+  vm_name:
+    type: string
+
+notify:
+  on-complete:
+    message: "\"@channel: bouncevm succeeded\""
+    routes:
+      - "hipchat"

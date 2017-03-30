@@ -1,0 +1,15 @@
+---
+chain:
+  - name: "poweroff_vm"
+    ref: "vsphere.vm_hw_power_off"
+    parameters:
+      vsphere: "{{ vsphere }}"
+      vm_name: "{{ vm_name }}"
+    on-success: "poweron_vm"
+  - name: "poweron_vm"
+    ref: "vsphere.vm_hw_power_on"
+    parameters:
+      vsphere: "{{ vsphere }}"
+      vm_name: "{{ vm_name }}"
+
+default: "poweroff_vm"
