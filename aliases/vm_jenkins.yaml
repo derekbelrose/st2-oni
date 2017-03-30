@@ -7,7 +7,7 @@ formats:
     representation:
       - "jenkins deploy {{ project }}"
 ack:
-  format: Hey there, I'll start building {{ project }}'
+  format: Hey there, I'll start building {{ execution.parameters.project }}'
 
 result:
   format: |
