@@ -1,0 +1,17 @@
+---
+name: "chatops.bounce_vmware_vm"
+action_ref: "oni.bouncevm"
+description: "Power off and on a VMware VM"
+formats:
+  - display: "bounce <vmname>"
+    representation:
+      - "bounce {{ vm_name}}"
+      - "bounce {{ vm_name }} on {{ vsphere }}"
+result:
+  format: |
+    Results of bounce {{ execution.parameters.args }}:
+    {% if execution.result.status == "succeeded" %}
+    Success!
+    {% else %}
+    Failure!
+    {% endif %}
